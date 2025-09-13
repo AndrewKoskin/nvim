@@ -43,10 +43,9 @@ vim.keymap.set({ "n", "t" }, "<leader>tt", function()
   toggle_term()
 end, { silent = true, desc = "Toggle terminal" })
 
--- Сделать выход из insert mode вместо \n на <Esc>
+-- Сделать выход из insert mode вместо \n на <Esc>, ну и на kj
 -- глобально для всех терминалов
--- vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { silent = false }) -- silent false будет показывать команду в командной строке
--- vim.keymap.set({"n", "t"}, "<Leader>20", "<C-w>20+")
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { silent = false }) -- silent false будет показывать команду в командной строке
 
 -- Опционально авто-insert и косметика
 vim.api.nvim_create_autocmd("TermOpen", {
